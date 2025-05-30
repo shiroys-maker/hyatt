@@ -10,34 +10,38 @@
   <meta property="og:url" content="https://hyatt.niraissc.jp/" />
   <meta property="og:title" content="Nirai Seaside Clinic - VA Medical Disability Examinations in Okinawa" />
   <meta property="og:description" content="Nirai Seaside Clinic, located at the Hyatt Regency Seragaki Island in Onna, Okinawa, specializes in VA Medical Disability Examinations. Managed by Leidos QTC service." />
-  <meta property="og:image" content="https://hyatt.niraissc.jp/NSC3.jpg" /> 
-
-  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="https://hyatt.niraissc.jp/NSC1.jpg" /> <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://hyatt.niraissc.jp/" />
   <meta property="twitter:title" content="Nirai Seaside Clinic - VA Medical Disability Examinations in Okinawa" />
   <meta property="twitter:description" content="Nirai Seaside Clinic, located at the Hyatt Regency Seragaki Island in Onna, Okinawa, specializes in VA Medical Disability Examinations. Managed by Leidos QTC service." />
-  <meta property="twitter:image" content="https://hyatt.niraissc.jp/NSC3.jpg" />
+  <meta property="twitter:image" content="https://hyatt.niraissc.jp/NSC1.jpg" /> <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-
+    /* 将来的なメンテナンス性を考慮し、CSSは外部ファイル (例: style.css) に分離することを推奨します。
+      <link rel="stylesheet" href="style.css"> のように読み込みます。
+    */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Open Sans', 'Noto Sans JP', Arial, sans-serif; /* モダンなフォントに変更 */
       margin: 0;
       padding: 0;
       background: #f5f9fa;
       color: #333;
       overflow-x: hidden;
+      line-height: 1.6; /* 行間を調整 */
     }
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 0 10px;
+      padding: 0 15px; /* 少しパディングを増やす */
     }
     .banner {
       width: 100%;
       max-height: 400px;
       object-fit: cover;
       display: block;
+      border-radius: 0 0 8px 8px; /* バナー下部に丸みを追加 */
     }
     header {
       background-color: #0077b6;
@@ -48,56 +52,86 @@
       flex-direction: column;
       align-items: center;
       gap: 10px;
+      margin-top: -8px; /* バナーとの重なりを調整 */
+      position: relative;
+      z-index: 10;
     }
     .title-row {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 15px; /* 少し調整 */
       flex-wrap: wrap;
       justify-content: center;
     }
     header img.logo {
-      height: 80px;
+      height: 70px; /* 少し調整 */
     }
     h1 {
       margin: 0;
-      font-size: 2.2em;
+      font-size: 2em; /* 少し調整 */
+      font-weight: 700;
     }
     .subtitle {
-      font-size: 1em;
+      font-size: 0.95em; /* 少し調整 */
       margin-top: 5px;
+      font-weight: 400;
     }
     section {
-      padding: 20px 0;
+      padding: 25px 0; /* 少し調整 */
+      background-color: #fff; /* セクション背景を白に */
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* 軽い影を追加 */
+      padding: 20px;
     }
     h2 {
       color: #023e8a;
+      margin-top: 0; /* セクション最初のh2のマージン調整 */
+      padding-bottom: 10px;
+      border-bottom: 2px solid #0077b6; /* h2の下線 */
+    }
+    h3 {
+        color: #005f88; /* h3の色調整 */
     }
     img.content-img {
       width: 100%;
+      max-width: 700px; /* 画像が大きくなりすぎないように制限 */
+      display: block; /* 中央寄せのため */
+      margin: 20px auto; /* 上下マージンと中央寄せ */
       border-radius: 8px;
-      margin-top: 10px;
-      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .info-section {
       display: flex;
-      gap: 20px;
+      gap: 30px; /* 少し調整 */
       margin-top: 30px;
-      flex-wrap: nowrap;
+      flex-wrap: wrap; /* レスポンシブ対応: wrapに変更 */
+    }
+    .office-hours, .map-container {
+      flex: 1 1 300px; /* flex-basisを追加して折り返しやすくする */
+      min-width: 280px; /* 最小幅を指定 */
     }
     .office-hours {
-      flex: 1;
-      background-color: #e0f2f1;
-      padding: 15px;
+      background-color: #e0f7fa; /* 少し明るい色に */
+      padding: 20px;
       border-radius: 8px;
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
     .office-hours h3 {
       margin-top: 0;
       color: #00695c;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #00695c;
     }
-    .map-container {
-      flex: 1;
+    .office-hours p {
+        margin-bottom: 10px;
+    }
+    .office-hours a {
+        color: #00695c;
+        text-decoration: none;
+    }
+    .office-hours a:hover {
+        text-decoration: underline;
     }
     iframe.map {
       width: 100%;
@@ -106,41 +140,70 @@
       border-radius: 8px;
     }
     footer {
-      background-color: #0077b6;
+      background-color: #005f88; /* 少し濃い青に */
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 20px 10px; /* 少しパディングを増やす */
       margin-top: 40px;
+      font-size: 0.9em;
     }
+    ol {
+        padding-left: 20px; /* リストのインデント調整 */
+    }
+    ol li {
+        margin-bottom: 10px; /* リストアイテム間のマージン */
+    }
+    a {
+        color: #0077b6;
+    }
+    a:hover {
+        color: #023e8a;
+    }
+
+    @media (max-width: 768px) {
+      .info-section {
+        flex-direction: column; /* 中間サイズで縦積みに */
+      }
+    }
+
     @media (max-width: 600px) {
       h1 {
-        font-size: 1.5em;
+        font-size: 1.6em; /* 少し調整 */
       }
       header img.logo {
-        height: 60px;
+        height: 50px; /* 少し調整 */
+      }
+      .subtitle {
+        font-size: 0.85em;
+      }
+      .container {
+        padding: 0 10px;
+      }
+       header {
+        padding: 20px 15px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="NSC1.jpg" alt="Aerial view of Nirai Seaside Clinic at Hyatt Regency Seragaki Island, Okinawa" class="banner" />
+  <img src="NSC1.jpg" alt="ニライシーサイドクリニックがあるハイアットリージェンシー瀬良垣アイランド沖縄の美しいオーシャンビュー" class="banner" />
 
+  <div class="container">
     <header>
       <div class="title-row">
-        <img src="logo.png" alt="Nirai Seaside Clinic Logo" class="logo" />
+        <img src="logo.png" alt="ニライシーサイドクリニック ロゴ" class="logo" />
         <h1>Nirai Seaside Clinic</h1>
       </div>
-      <div class="subtitle">VA Medical Disability Examination Office; Leidos QTC service</div>
-    </header>
+      <div class="subtitle">VA Medical Disability Examinations (Leidos QTC Service)</div> </header>
 
-    <section>
-      <h2>For VA Examinees:</h2>
+    <section id="for-examinees"> <h2>For VA Examinees:</h2>
       <p>We are located on the premises of the <a href="https://www.hyatt.com/hyatt-regency/en-US/okaro-hyatt-regency-seragaki-island-okinawa" target="_blank" rel="noopener noreferrer"><strong>Hyatt Regency Seragaki Island</strong></a><br>
       <strong>1108 Seragaki, Onna Village, Okinawa</strong></p>
 
       <p>Our clinic is in a <strong>secluded cottage</strong> at the back of the main hotel structure, facing the <strong>northwest ocean</strong> and directly across from the <strong>Fitness Center</strong>.</p>
+    </section>
 
+    <section id="how-to-reach">
       <h2>How to Reach Us:</h2>
       <ol>
         <li><strong>Do NOT park</strong> in the lot before the bridge labeled “The Beach House.”</li>
@@ -149,10 +212,11 @@
         <li><strong>Call us</strong> at <strong>090-4524-2828</strong>. We will personally come to escort you.</li>
       </ol>
 
-      <img src="NSC2.jpeg" alt="Map showing directions to Nirai Seaside Clinic within Hyatt Regency Seragaki Island" class="content-img">
-      <img src="NSC3.jpg"  alt="Ocean view from the Nirai Seaside Clinic area at Hyatt Regency Seragaki Island" class="content-img">
+      <img src="NSC2.jpeg" alt="ハイアットリージェンシー瀬良垣アイランド沖縄内、ニライシーサイドクリニックへの道順を示す敷地内マップ" class="content-img">
+      <img src="NSC3.jpg"  alt="ハイアットリージェンシー瀬良垣アイランド沖縄、ニライシーサイドクリニックのコテージエリアからの海の眺め" class="content-img">
+    </section>
       
-      
+    <section id="our-mission">
       <h2>Our Mission</h2>
 
       <h3>About Us</h3>
@@ -162,7 +226,10 @@
 
       <h3>Process Summary</h3>
       <p>If you have submitted a claim to the U.S. Department of Veterans Affairs (VA) for disability compensation or pension benefits and it has been approved, the VA will randomly assign you to an examiner for your disability evaluation. In partnership with International SOS, Dr. Shungo, a certified VA examiner, will perform the examination. This process includes reviewing medical records, performing a physical exam, asking detailed questions regarding your medical history and symptoms, as well as evaluating how the claimed disabilities affect your ablity to perform any occupational task. We aim to facilitate these steps for veterans in a comfortable and efficient manner.</p>
+    </section>
 
+    <section id="clinic-info">
+      <h2>Clinic Information</h2>
       <div class="info-section">
         <div class="office-hours">
           <h3>Office Hours</h3>
@@ -173,20 +240,20 @@
           <p><strong>Director: </strong><a href="https://www.linkedin.com/in/dr-shungo-hiroyasu" target="_blank" rel="noopener noreferrer">Dr. Shungo Hiroyasu</a></p>
           <p>Affiliated with <a href="https://www.internationalsos.co.jp/" target="_blank" rel="noopener noreferrer"><strong>International SOS</strong></a></p>
           <p><strong>Medical Corporation RYOSHUKAI Group</strong><br>
-             Headquaters:<a href="https://www.kmc.or.jp/" target="_blank" rel="noopener noreferrer"><strong>Kanauchi Medical Clinic</strong></a></p>
+             Headquarters: <a href="https://www.kmc.or.jp/" target="_blank" rel="noopener noreferrer"><strong>Kanauchi Medical Clinic</strong></a></p>
         </div>
         <div class="map-container">
           <iframe class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5638.942423983941!2d127.86718136158417!3d26.512227990699074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e503be38c480d7%3A0xb1ce8d076a8ef431!2z44OP44Kk44Ki44OD44OI44Oq44O844K444Kn44Oz44K344O8IOeArOiJr-Weo-OCouOCpOODqeODs-ODiSDmspbnuIQ!5e1!3m2!1sja!2sjp!4v1748414661870!5m2!1sja!2sjp"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5638.942423983941!2d127.86718136158417!3d26.512227990699074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e503be38c480d7%3A0xb1ce8d076a8ef431!2z44OP44Kk44Ki44OD44OI44Oq44O844K444Kn44Oz44K344O8IOeArOiJr-Weo-OCouOCpOODqeODs-ODiSDmspbnuIQ!5e1!3m2!1sja!2sjp!4v1748414661870!5m2!1sja!2sjp" 
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="Location of Nirai Seaside Clinic on Google Maps">
+            title="Nirai Seaside Clinic (Hyatt Regency Seragaki Island) Location Map">
           </iframe>
-        </div>
+          </div>
       </div>
     </section>
 
     <footer>
-      <p>Contact: 090-4524-2828 | Nirai Seaside Clinic, Hyatt Regency Seragaki Island</p>
+      <p>&copy; 2024 Nirai Seaside Clinic. All Rights Reserved.</p> <p>Contact: 090-4524-2828 | Nirai Seaside Clinic, Hyatt Regency Seragaki Island, 1108 Seragaki, Onna, Okinawa</p>
     </footer>
   </div>
   </body>
