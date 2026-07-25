@@ -5,21 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nirai Seaside Clinic - VA Medical Disability Examinations in Okinawa</title>
   <meta name="description" content="Nirai Seaside Clinic, located at the Hyatt Regency Seragaki Island in Onna, Okinawa, specializes in VA Medical Disability Examinations. Managed by Leidos QTC service. Contact Dr. Shungo Hiroyasu." />
+  <meta name="theme-color" content="#0077b6" />
+  <link rel="canonical" href="https://hyatt.niraissc.jp/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hyatt.niraissc.jp/" />
   <meta property="og:title" content="Nirai Seaside Clinic - VA Medical Disability Examinations in Okinawa" />
   <meta property="og:description" content="Nirai Seaside Clinic, located at the Hyatt Regency Seragaki Island in Onna, Okinawa, specializes in VA Medical Disability Examinations. Managed by Leidos QTC service." />
   <meta property="og:image" content="https://hyatt.niraissc.jp/NSC1.jpg" />
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://hyatt.niraissc.jp/" />
-  <meta property="twitter:title" content="Nirai Seaside Clinic - VA Medical Disability Examinations in Okinawa" />
-  <meta property="twitter:description" content="Nirai Seaside Clinic, located at the Hyatt Regency Seragaki Island in Onna, Okinawa, specializes in VA Medical Disability Examinations. Managed by Leidos QTC service." />
-  <meta property="twitter:image" content="https://hyatt.niraissc.jp/NSC1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nirai Seaside Clinic - VA Medical Disability Examinations in Okinawa" />
+  <meta name="twitter:description" content="Nirai Seaside Clinic, located at the Hyatt Regency Seragaki Island in Onna, Okinawa, specializes in VA Medical Disability Examinations. Managed by Leidos QTC service." />
+  <meta name="twitter:image" content="https://hyatt.niraissc.jp/NSC1.jpg" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Nirai Seaside Clinic",
+    "description": "VA Medical Disability Examinations (Leidos QTC Service) at the Hyatt Regency Seragaki Island, Onna, Okinawa. Examinations by appointment through Leidos QTC only.",
+    "url": "https://hyatt.niraissc.jp/",
+    "image": "https://hyatt.niraissc.jp/NSC1.jpg",
+    "logo": "https://hyatt.niraissc.jp/logo.png",
+    "telephone": "+81-90-4524-2828",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1108 Seragaki",
+      "addressLocality": "Onna Village",
+      "addressRegion": "Okinawa",
+      "postalCode": "904-0404",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.512228,
+      "longitude": 127.867181
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Thursday"], "opens": "09:00", "closes": "17:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "12:00" }
+    ]
+  }
+  </script>
 
   <style>
     html {
@@ -35,143 +67,166 @@
       line-height: 1.6;
     }
     .container {
-      max-width: 900px; /*cite: 1*/
-      margin-left: auto; /*cite: 1*/
-      margin-right: auto; /*cite: 1*/
-      padding: 0 15px; /*cite: 1*/
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 15px;
     }
     .banner {
       width: 100%;
-      max-height: 350px; /* バナーの高さを少し抑える場合 */
+      height: auto;
+      max-height: 350px;
       object-fit: cover;
       display: block;
-      /* border-radius: 0 0 8px 8px; /* バナー下部の丸みは不要とのことなのでコメントアウトまたは削除 */
     }
     header {
-      background-color: #0077b6; /*cite: 1*/
-      color: white; /*cite: 1*/
-      padding-top: 30px; /*cite: 1*/
-      padding-bottom: 30px; /*cite: 1*/
-      /* padding-left と padding-right は削除し、中の.containerで制御 */
-      text-align: center; /*cite: 1*/
-      /* display: flex, flex-direction: column, align-items: center, gap はヘッダー直下の.containerに移動 */
-      margin-top: 0px; /* バナーとの重なりを調整 (通常は不要) */ /*cite: 1*/
-      position: relative; /*cite: 1*/
-      z-index: 10; /*cite: 1*/
+      background-color: #0077b6;
+      color: white;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: center;
+      position: relative;
+      z-index: 10;
     }
-    /* ヘッダー内のコンテンツを中央寄せするためのコンテナ */
     header .container {
-      display: flex; /*cite: 1*/
-      flex-direction: column; /*cite: 1*/
-      align-items: center; /*cite: 1*/
-      gap: 10px; /*cite: 1*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
     .title-row {
-      display: flex; /*cite: 1*/
-      align-items: center; /*cite: 1*/
-      gap: 15px; /*cite: 1*/
-      flex-wrap: wrap; /*cite: 1*/
-      justify-content: center; /*cite: 1*/
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     header img.logo {
-      height: 70px; /*cite: 1*/
+      height: 70px;
+      width: 70px;
     }
     h1 {
-      margin: 0; /*cite: 1*/
-      font-size: 2em; /*cite: 1*/
-      font-weight: 700; /*cite: 1*/
+      margin: 0;
+      font-size: 2em;
+      font-weight: 700;
     }
     .subtitle {
-      font-size: 0.95em; /*cite: 1*/
-      margin-top: 5px; /*cite: 1*/
-      font-weight: 400; /*cite: 1*/
+      font-size: 0.95em;
+      margin-top: 5px;
+      font-weight: 400;
     }
     section {
-      background-color: #fff; /*cite: 1*/
-      margin-top: 20px; /*cite: 1*/
-      border-radius: 8px; /*cite: 1*/
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05); /*cite: 1*/
-      padding: 20px; /*cite: 1*/
+      background-color: #fff;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      scroll-margin-top: 20px;
     }
-    /* メインコンテンツを囲むコンテナのマージン調整 */
     .main-content-container {
-        padding-top: 20px; /* ヘッダーとの間に少しスペース */
-        padding-bottom: 40px; /* フッターとの間に少しスペース */
+        padding-top: 20px;
+        padding-bottom: 40px;
     }
     h2 {
-      color: #023e8a; /*cite: 1*/
-      margin-top: 0; /*cite: 1*/
-      padding-bottom: 10px; /*cite: 1*/
-      border-bottom: 2px solid #0077b6; /*cite: 1*/
+      color: #023e8a;
+      margin-top: 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #0077b6;
     }
     h3 {
-        color: #005f88; /*cite: 1*/
+        color: #005f88;
     }
     img.content-img {
-      width: 100%; /*cite: 1*/
-      max-width: 700px; /*cite: 1*/
-      display: block; /*cite: 1*/
-      margin: 20px auto; /*cite: 1*/
-      border-radius: 8px; /*cite: 1*/
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1); /*cite: 1*/
+      width: 100%;
+      height: auto;
+      max-width: 700px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .notice {
+      background-color: #fff8e1;
+      border-left: 4px solid #f5a623;
+      border-radius: 4px;
+      padding: 12px 16px;
+      margin: 15px 0;
+    }
+    .notice p {
+      margin: 0;
     }
     .info-section {
-      display: flex; /*cite: 1*/
-      gap: 30px; /*cite: 1*/
-      margin-top: 30px; /*cite: 1*/
-      flex-wrap: wrap; /*cite: 1*/
+      display: flex;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
     }
     .office-hours, .map-container {
-      flex: 1 1 300px; /*cite: 1*/
-      min-width: 280px; /*cite: 1*/
+      flex: 1 1 300px;
+      min-width: 280px;
     }
     .office-hours {
-      background-color: #e0f7fa; /*cite: 1*/
-      padding: 20px; /*cite: 1*/
-      border-radius: 8px; /*cite: 1*/
-      font-size: 0.9em; /*cite: 1*/
+      background-color: #e0f7fa;
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 0.9em;
     }
     .office-hours h3 {
-      margin-top: 0; /*cite: 1*/
-      color: #00695c; /*cite: 1*/
-      padding-bottom: 5px; /*cite: 1*/
-      border-bottom: 1px solid #00695c; /*cite: 1*/
+      margin-top: 0;
+      color: #00695c;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #00695c;
     }
     .office-hours p {
-        margin-bottom: 10px; /*cite: 1*/
+        margin-bottom: 10px;
     }
     .office-hours a {
-        color: #00695c; /*cite: 1*/
-        text-decoration: none; /*cite: 1*/
+        color: #00695c;
+        text-decoration: none;
     }
     .office-hours a:hover {
-        text-decoration: underline; /*cite: 1*/
+        text-decoration: underline;
+    }
+    table.hours {
+      border-collapse: collapse;
+      margin-bottom: 15px;
+    }
+    table.hours th {
+      text-align: left;
+      padding: 2px 16px 2px 0;
+      font-weight: 700;
+    }
+    table.hours td {
+      padding: 2px 0;
     }
     iframe.map {
-      width: 100%; /*cite: 1*/
-      height: 300px; /*cite: 1*/
-      border: 0; /*cite: 1*/
-      border-radius: 8px; /*cite: 1*/
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
     }
     footer {
-      background-color: #005f88; /*cite: 1*/
-      color: white; /*cite: 1*/
-      text-align: center; /*cite: 1*/
-      padding: 20px 10px; /*cite: 1*/
-      /* margin-top: 40px; /* .main-content-container の padding-bottom で調整 */ /*cite: 1*/
-      font-size: 0.9em; /*cite: 1*/
+      background-color: #005f88;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9em;
     }
     ol {
-        padding-left: 20px; /*cite: 1*/
+        padding-left: 20px;
     }
     ol li {
-        margin-bottom: 10px; /*cite: 1*/
+        margin-bottom: 10px;
     }
     a {
-        color: #0077b6; /*cite: 1*/
+        color: #0077b6;
     }
     a:hover {
-        color: #023e8a; /*cite: 1*/
+        color: #023e8a;
+    }
+    a:focus-visible {
+        outline: 2px solid #023e8a;
+        outline-offset: 2px;
     }
 
     .nav-links {
@@ -192,6 +247,10 @@
       background-color: rgba(255,255,255,0.2);
       color: white;
     }
+    .nav-links a:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 2px;
+    }
     .nav-buttons {
       display: flex;
       gap: 10px;
@@ -209,57 +268,58 @@
       flex: 1 1 auto;
     }
     .google-maps-btn {
-      background-color: #4285F4;
-      color: white !important;
-    }
-    .google-maps-btn:hover {
       background-color: #3367D6;
       color: white !important;
     }
+    .google-maps-btn:hover {
+      background-color: #2a56c6;
+      color: white !important;
+    }
     .waze-btn {
-      background-color: #33ccff;
+      background-color: #007fae;
       color: white !important;
     }
     .waze-btn:hover {
-      background-color: #29a8d6;
+      background-color: #006a92;
       color: white !important;
     }
     @media (max-width: 768px) {
       .info-section {
-        flex-direction: column; /*cite: 1*/
+        flex-direction: column;
       }
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 1.6em; /*cite: 1*/
+        font-size: 1.6em;
       }
       header img.logo {
-        height: 50px; /*cite: 1*/
+        height: 50px;
+        width: 50px;
       }
       .subtitle {
-        font-size: 0.85em; /*cite: 1*/
+        font-size: 0.85em;
       }
-      .container { /* このcontainerは主にメインコンテンツ用 */
-        padding: 0 10px; /*cite: 1*/
+      .container {
+        padding: 0 10px;
       }
-       header .container { /* ヘッダー内のコンテナの左右パディングも調整 */
+      header .container {
         padding: 0 10px;
       }
     }
   </style>
 </head>
 <body>
-  <img src="NSC1.jpg" alt="Beautiful oceanview of Hyatt Regency Seragaki Island Okinawa, home of Nirai Seaside Clinic" class="banner" />
+  <img src="NSC1.jpg" alt="Beautiful oceanview of Hyatt Regency Seragaki Island Okinawa, home of Nirai Seaside Clinic" class="banner" width="1800" height="838" fetchpriority="high" />
 
   <header>
     <div class="container">
       <div class="title-row">
-        <img src="logo.png" alt="Nirai Seaside Clinic Logo" class="logo" />
+        <img src="logo.png" alt="Nirai Seaside Clinic Logo" class="logo" width="200" height="200" />
         <h1>Nirai Seaside Clinic</h1>
       </div>
       <div class="subtitle">VA Medical Disability Examinations (Leidos QTC Service)</div>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="#how-to-reach">Directions</a>
         <a href="#our-mission">About</a>
         <a href="#clinic-info">Info</a>
@@ -277,6 +337,10 @@
       <p><strong>Estimated travel time:</strong> ~40 min from Camp Foster | ~30 min from Kadena AB</p>
       <p><strong>Please arrive on time</strong> for your scheduled appointment.</p>
 
+      <div class="notice">
+        <p><strong>Appointments are scheduled by Leidos QTC only.</strong> The clinic cannot book, reschedule, or cancel appointments. For any scheduling changes, please contact QTC directly using the information in your appointment letter.</p>
+      </div>
+
       <h3>What to Bring</h3>
       <ul>
         <li>Photo ID (CAC / Military ID)</li>
@@ -293,13 +357,13 @@
         <li><strong>Do NOT park</strong> in the lot before the bridge labeled “The Beach House.”</li>
         <li><strong>Proceed across the bridge</strong> to the valet parking at the main hotel entrance.</li>
         <li><strong>Inform the doorman</strong>: “I’m here for the Nirai Seaside Clinic VA examination.” They will guide you to the proper parking area.</li>
-        <li><strong>Call us</strong> at <a href="tel:09045242828"><strong>090-4524-2828</strong></a>. We will personally come to escort you.</li>
+        <li><strong>Call us</strong> at <a href="tel:+819045242828"><strong>090-4524-2828</strong></a> (from a U.S. phone: +81-90-4524-2828). We will personally come to escort you.</li>
       </ol>
 
-      <img src="NSC2.jpg" alt="Property map showing directions to Nirai Seaside Clinic within Hyatt Regency Seragaki Island Okinawa" class="content-img">
-      <img src="NSC3.jpg" alt="Ocean view from the cottage area of Nirai Seaside Clinic at Hyatt Regency Seragaki Island Okinawa" class="content-img">
+      <img src="NSC2.jpg" alt="Property map showing directions to Nirai Seaside Clinic within Hyatt Regency Seragaki Island Okinawa" class="content-img" width="1642" height="1430" loading="lazy">
+      <img src="NSC3.jpg" alt="Ocean view from the cottage area of Nirai Seaside Clinic at Hyatt Regency Seragaki Island Okinawa" class="content-img" width="1000" height="571" loading="lazy">
     </section>
-      
+
     <section id="our-mission">
       <h2>Our Mission</h2>
 
@@ -317,12 +381,14 @@
       <div class="info-section">
         <div class="office-hours">
           <h3>Office Hours</h3>
-          <p>MON  9:00 - 17:00<br>
-             TUE  9:00 - 17:00<br>
-             WED  <em>Closed</em><br>
-             THU  9:00 - 17:00<br>
-             FRI  9:00 - 12:00<br>
-             SAT/SUN  <em>Closed</em></p>
+          <table class="hours">
+            <tr><th scope="row">MON</th><td>9:00 - 17:00</td></tr>
+            <tr><th scope="row">TUE</th><td>9:00 - 17:00</td></tr>
+            <tr><th scope="row">WED</th><td><em>Closed</em></td></tr>
+            <tr><th scope="row">THU</th><td>9:00 - 17:00</td></tr>
+            <tr><th scope="row">FRI</th><td>9:00 - 12:00</td></tr>
+            <tr><th scope="row">SAT/SUN</th><td><em>Closed</em></td></tr>
+          </table>
           <p><strong>Director: </strong><a href="https://www.linkedin.com/in/dr-shungo-hiroyasu" target="_blank" rel="noopener noreferrer">Dr. Shungo Hiroyasu</a></p>
           <p>Affiliated with <a href="https://www.internationalsos.co.jp/" target="_blank" rel="noopener noreferrer"><strong>International SOS</strong></a></p>
           <p><strong>Medical Corporation RYOSHUKAI Group</strong><br>
@@ -346,7 +412,7 @@
   <footer>
     <div class="container">
         <p>© 2025 Nirai Seaside Clinic. All Rights Reserved.</p>
-        <p>Contact: <a href="tel:09045242828" style="color: white;">090-4524-2828</a> | Nirai Seaside Clinic, Hyatt Regency Seragaki Island, 1108 Seragaki, Onna, Okinawa</p>
+        <p>Contact: <a href="tel:+819045242828" style="color: white;">090-4524-2828 (+81-90-4524-2828)</a> | Nirai Seaside Clinic, Hyatt Regency Seragaki Island, 1108 Seragaki, Onna, Okinawa</p>
     </div>
   </footer>
 </body>
