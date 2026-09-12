@@ -267,6 +267,23 @@
       text-align: center;
       flex: 1 1 auto;
     }
+    .header-actions {
+      justify-content: center;
+      width: 100%;
+      max-width: 480px;
+      margin-top: 4px;
+    }
+    .header-actions .nav-btn {
+      background-color: white;
+      color: #023e8a;
+    }
+    .header-actions .nav-btn:hover {
+      background-color: #e0f7fa;
+    }
+    .header-actions .nav-btn:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 3px;
+    }
     .google-maps-btn {
       background-color: #3367D6;
       color: white !important;
@@ -324,6 +341,10 @@
         <a href="#our-mission">About</a>
         <a href="#clinic-info">Info</a>
       </nav>
+      <div class="nav-buttons header-actions" role="group" aria-label="Call the clinic or open directions">
+        <a href="tel:+819045242828" class="nav-btn">Call the Clinic</a>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=26.512228,127.867181" target="_blank" rel="noopener noreferrer" class="nav-btn">Open in Google Maps</a>
+      </div>
     </div>
   </header>
 
@@ -373,7 +394,7 @@
       <p>Our VA examination services are a crucial step in the journey toward veterans receiving government benefits. We will perform a comprehensive and impartial evaluation, documenting the severity of disabilities and their connection to military service. However, we do not provide treatment, refer patients to specialists, nor make final determinations regarding service connections.</p>
 
       <h3>Process Summary</h3>
-      <p>If you have submitted a claim to the U.S. Department of Veterans Affairs (VA) for disability compensation or pension benefits and it has been approved, the VA will randomly assign you to an examiner for your disability evaluation. In partnership with International SOS, Dr. Shungo, a certified VA examiner, will perform the examination. This process includes reviewing medical records, performing a physical exam, asking detailed questions regarding your medical history and symptoms, as well as evaluating how the claimed disabilities affect your ability to perform any occupational task. We aim to facilitate these steps for veterans in a comfortable and efficient manner.</p>
+      <p>After you submit a claim to the U.S. Department of Veterans Affairs (VA) for disability compensation or pension benefits, the VA may request a claim examination to gather information needed to decide your claim. An examination does not mean your claim has been approved. Appointments at our clinic are arranged through Leidos QTC. In partnership with International SOS, Dr. Shungo, a certified VA examiner, will perform the examination. This process includes reviewing medical records, performing a physical exam, asking detailed questions regarding your medical history and symptoms, as well as evaluating how the claimed disabilities affect your ability to perform any occupational task. We aim to facilitate these steps for veterans in a comfortable and efficient manner.</p>
     </section>
 
     <section id="clinic-info">
